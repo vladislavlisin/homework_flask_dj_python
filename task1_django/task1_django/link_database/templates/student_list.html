@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Student's list</title>
+</head>
+<body>
+    <a href="add_student">Add student</a>
+    <h2>Student's list</h2>
+    <table>
+        <thead> <th>Id</th> <th>ФИО</th> <th>Дата рождения</th> <th>Дата поступления</th> <th>University ID</th> <th></th> </thead>
+        {% for st in students %}
+        <tr>
+            <td> <a href="/link_database/student_list/{{st.id}}"> {{ st.id }} </a> </td>
+            <td> {{ st.FIO }} </td>
+            <td> {{ st.born_date }} </td>
+            <td> {{ st.get_in_year }} </td>
+            <td> {{ st.university }} </td>
+            <td><a href="delete_student/{{st.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

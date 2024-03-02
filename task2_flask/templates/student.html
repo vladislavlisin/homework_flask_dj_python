@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student info</title>
+</head>
+<body>
+    <h1>Student info</h1>
+    <p>Student ID: {{st.id}}</p>
+    <p>Student FIO: {{st.FIO}}</p>
+    <p>Student born date: {{st.born_date}}</p>
+    <p>Student get in date: {{st.get_in_date}}</p>
+    <p>University: {{st.university}}</p>
+<a href="/student_list/{{ st.id }}/change">Change</a>
+    <p></p>
+<a href="/student_list">Back</a>
+</body>
+</html>

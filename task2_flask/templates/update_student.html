@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+        <p> {{ form.FIO.label() }} {{ form.FIO() }}
+        <p> {{ form.born_date.label() }} {{ form.born_date() }}
+        <p> {{ form.get_in_date.label() }} {{ form.get_in_date() }}
+        <p> {{ form.university.label() }} {{ form.university() }}
+        <p> {{ form.submit() }}
+        {% for msg in get_flashed_messages() %}
+        <div class="flash">{{msg}}</div>
+        {% endfor %}
+    </form>
+</body>
+</html>
